@@ -7,7 +7,7 @@ from gpiozero import LED
 
 for i, mic_name in enumerate (sr.Microphone.list_microphone_names()):
     print("mic: " + mic_name)
-    if "USB Audio Devic" in mic_name:
+    if "USB Audio Device" in mic_name:
         print("USB Audio Devic " + mic_name)
         mic = sr.Microphone(device_index=i, chunk_size=1024, sample_rate=48000)
 
