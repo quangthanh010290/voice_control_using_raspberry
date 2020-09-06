@@ -11,3 +11,8 @@
 sudo ./setup.sh
 ```
 
+## Run
+
+```
+sudo ./rpi_voice_control.py
+```
