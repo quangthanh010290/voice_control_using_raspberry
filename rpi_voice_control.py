@@ -1,6 +1,5 @@
 #!/usr/bin/python
 
-import pyttsx3
 import speech_recognition as sr
 import pyaudio
 from gpiozero import LED
