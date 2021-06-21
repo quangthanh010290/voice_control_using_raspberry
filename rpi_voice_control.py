@@ -4,6 +4,12 @@ import pyttsx3
 import speech_recognition as sr
 import pyaudio
 from gpiozero import LED
+import os
+
+class GoogleTTS():
+    def say(text):
+        cmd="text2speech " + text
+        os.system(cmd)
 
 for i, mic_name in enumerate (sr.Microphone.list_microphone_names()):
     print("mic: " + mic_name)
@@ -13,7 +19,7 @@ for i, mic_name in enumerate (sr.Microphone.list_microphone_names()):
 
 
 pi_ear = sr.Recognizer()
-pi_mouth = pyttsx3.init()
+pi_mouth = GoogleTTS
 light_1 = LED(17)
 fan = LED(27)
 light_1.on()
